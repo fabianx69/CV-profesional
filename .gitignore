@@ -1,0 +1,41 @@
+# --- LENGUAJES Y FRAMEWORKS ---
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.env
+.env.local
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+*.symbol
+.pub-cache/
+.pub/
+
+# --- SISTEMA Y EDITORES ---
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.iws
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# --- CLOUD & SEGURIDAD ---
+# Archivos de llaves o secretos (¡Muy importante para SecDevOps!)
+*.pem
+*.key
+service-account-file.json
