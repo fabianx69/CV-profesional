@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
+    
     <title>Fabián Urrutia | Portfolio Profesional</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        .lang-btn { cursor: pointer; transition: all 0.2s; border: none; background: none; padding: 4px 8px; border-radius: 4px; }
-        .lang-btn:hover { background: #f1f5f9; }
+        .lang-btn { cursor: pointer; transition: all 0.2s; border: none; background: none; padding: 4px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+        .lang-btn:hover { background: #e2e8f0; color: #2563eb; }
         .no-select { user-select: none; }
         .section-animate { transition: opacity 0.3s ease; }
-        .skill-badge { background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 500; color: #475569; }
+        .skill-badge { background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 500; color: #475569; display: inline-block; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 selection:bg-blue-100">
 
-    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-50 p-4 no-select">
-        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+    <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm z-50 p-3 no-select">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-2 text-slate-500 uppercase tracking-widest">
             <button onclick="setLanguage('es')" class="lang-btn text-blue-600" id="btn-es">ESP</button>
             <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">ENG</button>
             <button onclick="setLanguage('fr')" class="lang-btn" id="btn-fr">FRA</button>
             <button onclick="setLanguage('de')" class="lang-btn" id="btn-de">DEU</button>
             <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">ITA</button>
-            <span class="mx-1">|</span>
+            <span class="text-slate-300 mx-2">|</span>
             <button onclick="setLanguage('zh')" class="lang-btn" id="btn-zh">中文</button>
             <button onclick="setLanguage('ko')" class="lang-btn" id="btn-ko">한국어</button>
             <button onclick="setLanguage('ja')" class="lang-btn" id="btn-ja">日本語</button>
@@ -36,24 +39,24 @@
         </div>
     </nav>
 
-    <main id="main-container" class="max-w-4xl mx-auto p-6 md:p-12 bg-white shadow-2xl my-10 rounded-xl border border-slate-100 relative section-animate">
+    <main id="main-container" class="max-w-4xl mx-auto p-6 md:p-12 bg-white shadow-xl my-8 rounded-xl border border-slate-200 relative section-animate">
         
         <header class="text-center border-b pb-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-slate-900">FABIÁN URRUTIA</h1>
-            <p class="text-slate-500 mt-2 font-medium">Santiago, Chile | fabianenriqueurrutiap@gmail.com | +56 9 92200739</p>
+            <p class="text-slate-500 mt-2 text-sm">Santiago, Chile | fabianenriqueurrutiap@gmail.com | +56 9 92200739</p>
             <div class="mt-4 flex justify-center">
-                <span id="title-tag" class="bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold border border-blue-100"></span>
+                <span id="title-tag" class="bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold border border-blue-100 uppercase tracking-wide"></span>
             </div>
         </header>
 
         <section class="mt-10">
             <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-profile"></h2>
-            <p id="val-profile" class="leading-relaxed text-slate-600 text-justify"></p>
+            <p id="val-profile" class="leading-relaxed text-slate-600 text-justify text-sm"></p>
         </section>
 
         <section class="mt-10">
             <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-edu"></h2>
-            <div id="val-edu" class="space-y-4"></div>
+            <div id="val-edu" class="text-sm text-slate-700"></div>
         </section>
 
         <section class="mt-10">
@@ -63,12 +66,12 @@
 
         <section class="mt-10">
             <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-projs"></h2>
-            <div id="val-projs" class="space-y-8"></div>
+            <div id="val-projs" class="space-y-6"></div>
         </section>
 
         <section class="mt-10">
             <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-exp"></h2>
-            <div id="val-exp" class="space-y-4"></div>
+            <div id="val-exp" class="text-sm text-slate-700"></div>
         </section>
 
         <section class="mt-10 pb-10">
@@ -76,8 +79,8 @@
             <div id="val-certs" class="space-y-6"></div>
         </section>
 
-        <footer class="mt-12 pt-8 border-t text-center text-slate-400 text-xs">
-            <p>&copy; 2026 Fabián Urrutia - Secure Multilingual Portfolio</p>
+        <footer class="mt-10 pt-6 border-t text-center text-slate-400 text-xs uppercase tracking-widest">
+            <p>&copy; 2026 Fabián Urrutia | SecDevOps Cloud Portfolio</p>
         </footer>
 
         <div style="display:none; visibility:hidden;" aria-hidden="true">
@@ -86,94 +89,98 @@
     </main>
 
     <script>
+        // Estructura de datos para internacionalización.
         const translations = Object.freeze({
             es: {
                 title: "Ingeniero en Informática",
                 profile: "PERFIL PROFESIONAL",
                 profileDesc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas, integrando Inteligencia Artificial Generativa y mejores prácticas de la industria para optimizar procesos críticos.",
                 edu: "EDUCACIÓN",
-                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | 2026 (Esperado)<br>Título Técnico: Analista Programador (Completado)`,
+                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | Fecha esperada de graduación: 2026<br>Título Técnico: Analista Programador (Completado)`,
                 skills: "HABILIDADES TÉCNICAS",
                 skillsData: [
-                    {cat: "Lenguajes", val: "JS, TS, Dart, SQL, Python"},
-                    {cat: "Cloud & DevOps", val: "GCP, Firebase, Docker, Git, PostgreSQL"},
-                    {cat: "Frameworks", val: "Node.js, Flutter, Express.js"},
-                    {cat: "Seguridad", val: "SecDevOps, Hardening, Vulnerabilidades"}
+                    {cat: "Lenguajes", val: "JavaScript, TypeScript, Dart, SQL, Python."},
+                    {cat: "Frameworks", val: "Node.js, Flutter (Móvil y Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "Google Cloud Platform (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."},
+                    {cat: "Seguridad", val: "Implementación de metodologías SecDevOps, análisis de vulnerabilidades y hardening."}
                 ],
                 projs: "PROYECTOS DESTACADOS",
                 projsData: [
-                    {t: "RiskSchool Cloud", d: "Ecosistema seguro de gestión de riesgos serverless. Backend en Node.js sobre Google Cloud Run y App Flutter multiplataforma."},
-                    {t: "IA en Dgenius", d: "Implementación de RAG con Gemini 1.5 Flash y Ollama bajo principios SOLID."},
-                    {t: "Big Data Simulation", d: "Pipelines con GCP Dataflow y Pub/Sub. Analítica en BigQuery."}
+                    {t: "RiskSchool Cloud | Ingeniero Full Stack & Cloud", d: "Arquitectura y despliegue de un ecosistema seguro de gestión de riesgos. Desarrollo de API REST de alto rendimiento con Node.js, contenedores y despliegue en Google Cloud Run. Gestión de instancia Cloud de PostgreSQL 17. Aplicación unificada en Flutter."},
+                    {t: "Integración de IA en Dgenius | Ingeniero Full Stack", d: "Implementación de IA Generativa aplicando técnicas de RAG y principios SOLID. Motores: Gemini 1.5 Flash como motor principal y Ollama (Llama 3) para shadow learning."},
+                    {t: "Simulación de Big Data | Ingeniero de Datos", d: "Implementación de pipelines con GCP Dataflow y Pub/Sub para flujos de datos en tiempo real. Uso de BigQuery para analítica avanzada."}
                 ],
                 exp: "EXPERIENCIA PROFESIONAL",
-                expData: "<strong>Biconsulting SPA</strong> | Pasante de TI<br>Enero 2025 – Presente<br>Análisis de flujos TI y soluciones automatizadas.",
+                expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>Pasante de TI | Enero 2025 – Presente<br>Análisis y documentación de flujos de trabajo de TI para la estrategia de digitalización. Colaboración para identificar cuellos de botella y proponer soluciones automatizadas.",
                 certs: "CERTIFICACIONES PROFESIONALES",
                 certsData: [
-                    { emisor: "CertiProf (Internacionales)", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
-                    { emisor: "Especialidades Duoc UC", lista: ["Programación de Software", "Arquitectura de Software", "Inteligencia de Negocios", "Gestión de Proyectos TI", "Modelos de Datos", "Calidad de Software", "Análisis de Requerimientos"] }
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
+                    { emisor: "Especialidades Duoc UC", lista: ["Programación de Software", "Arquitectura de Software", "Inteligencia de Negocios", "Gestión de Proyectos Informáticos", "Análisis y Desarrollo de Modelos de Datos", "Calidad de Software", "Análisis y Planificación de Requerimientos"] }
                 ]
             },
             en: {
                 title: "Computer Engineer",
                 profile: "PROFESSIONAL PROFILE",
-                profileDesc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a focus on SecDevOps. Experienced in building scalable, secure, and automated solutions, integrating Generative AI and industry best practices.",
+                profileDesc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a comprehensive focus on SecDevOps. Experienced in building scalable, secure, and automated solutions, integrating Generative AI.",
                 edu: "EDUCATION",
-                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | 2026 (Expected)<br>Associate Degree: Programmer Analyst (Completed)`,
+                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | Expected Graduation: 2026<br>Associate Degree: Programmer Analyst (Completed)`,
                 skills: "TECHNICAL SKILLS",
                 skillsData: [
-                    {cat: "Languages", val: "JS, TS, Dart, SQL, Python"},
-                    {cat: "Cloud & DevOps", val: "GCP, Firebase, Docker, Git, PostgreSQL"},
-                    {cat: "Frameworks", val: "Node.js, Flutter, Express.js"},
-                    {cat: "Security", val: "SecDevOps, Hardening, Vulnerability Analysis"}
+                    {cat: "Languages", val: "JavaScript, TypeScript, Dart, SQL, Python."},
+                    {cat: "Frameworks", val: "Node.js, Flutter (Mobile & Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."},
+                    {cat: "Security", val: "SecDevOps methodologies, vulnerability analysis, cloud hardening."}
                 ],
                 projs: "KEY PROJECTS",
                 projsData: [
-                    {t: "RiskSchool Cloud", d: "Secure serverless risk management ecosystem. Node.js on Cloud Run and Flutter app."},
-                    {t: "AI Integration (Dgenius)", d: "RAG implementation using Gemini 1.5 Flash and Ollama with SOLID principles."},
-                    {t: "Big Data Simulation", d: "Data pipelines with GCP Dataflow/Pub/Sub. BigQuery analytics."}
+                    {t: "RiskSchool Cloud | Full Stack & Cloud Engineer", d: "Architecture and deployment of a secure risk management ecosystem. High-performance REST API with Node.js on Google Cloud Run. Managed PostgreSQL 17. Unified Flutter application."},
+                    {t: "AI Integration at Dgenius | Full Stack Engineer", d: "Generative AI implementation using RAG techniques and SOLID principles. Engines: Gemini 1.5 Flash and Ollama (Llama 3)."},
+                    {t: "Big Data Simulation | Data Engineer", d: "Pipelines with GCP Dataflow and Pub/Sub. BigQuery for advanced analytics."}
                 ],
                 exp: "PROFESSIONAL EXPERIENCE",
-                expData: "<strong>Biconsulting SPA</strong> | IT Intern<br>Jan 2025 – Present<br>Analyzing IT workflows and proposing automated solutions.",
+                expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>IT Intern | Jan 2025 – Present<br>Analyzing IT workflows for digitalization strategy. Proposing automated solutions.",
                 certs: "PROFESSIONAL CERTIFICATIONS",
                 certsData: [
-                    { emisor: "CertiProf (International)", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
-                    { emisor: "Duoc UC Specialisations", lista: ["Software Programming", "Software Architecture", "Business Intelligence", "IT Project Management", "Data Modeling", "Software Quality (QA)", "Requirements Analysis"] }
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
+                    { emisor: "Duoc UC Specialisations", lista: ["Software Programming", "Software Architecture", "Business Intelligence", "IT Project Management", "Data Model Development", "Software Quality", "Requirements Analysis"] }
                 ]
-            }
+            },
+            zh: { title: "计算机工程师", profile: "职业简介", edu: "教育背景", skills: "技术技能", projs: "精选项目", exp: "工作经验", certs: "专业认证" },
+            ja: { title: "コンピュータエンジニア", profile: "専門プロフィール", edu: "学歴", skills: "技術スキル", projs: "主要プロジェクト", exp: "職歴", certs: "認定資格" },
+            ko: { title: "컴퓨터 엔지니어", profile: "프로필", edu: "학력", skills: "기술 스택", projs: "주요 프로젝트", exp: "경력", certs: "자격증" },
+            hi: { title: "कंप्यूटर इंजीनियर", profile: "प्रोफाइल", edu: "शिक्षा", skills: "कौशल", projs: "परियोजनाएं", exp: "अनुभव", certs: "प्रमाणन" },
+            de: { title: "Informatikingenieur", profile: "BERUFLICHES PROFIL", edu: "AUSBILDUNG", skills: "TECHNISCHE FÄHIGKEITEN", projs: "PROJEKTE", exp: "BERUFSERFAHRUNG", certs: "ZERTIFIZIERUNGEN" },
+            fr: { title: "Ingénieur Informatique", profile: "PROFIL PROFESSIONNEL", edu: "ÉDUCATION", skills: "COMPÉTENCES TECHNIQUES", projs: "PROJETS CLÉS", exp: "EXPÉRIENCE", certs: "CERTIFICATIONS" },
+            it: { title: "Ingegnere Informatico", profile: "PROFILO PROFESSIONALE", edu: "FORMAZIONE", skills: "COMPETENZE TECNICHE", projs: "PROGETTI", exp: "ESPERIENZA", certs: "CERTIFICAZIONI" }
         });
 
+        // Motor de renderizado para actualización de datos en el DOM.
         function setLanguage(lang) {
             const data = translations[lang] || translations['en'];
+            const fallback = translations['en'];
             const container = document.getElementById('main-container');
             container.style.opacity = 0;
 
             setTimeout(() => {
                 document.getElementById('title-tag').innerText = data.title;
                 document.getElementById('lbl-profile').innerText = data.profile;
-                document.getElementById('val-profile').innerText = data.profileDesc;
+                document.getElementById('val-profile').innerText = data.profileDesc || fallback.profileDesc;
                 document.getElementById('lbl-edu').innerText = data.edu;
-                document.getElementById('val-edu').innerHTML = data.eduData;
+                document.getElementById('val-edu').innerHTML = data.eduData || fallback.eduData;
                 document.getElementById('lbl-skills').innerText = data.skills;
                 document.getElementById('lbl-projs').innerText = data.projs;
                 document.getElementById('lbl-exp').innerText = data.exp;
-                document.getElementById('val-exp').innerHTML = data.expData;
+                document.getElementById('val-exp').innerHTML = data.expData || fallback.expData;
                 document.getElementById('lbl-certs').innerText = data.certs;
 
-                // Render Skills
-                document.getElementById('val-skills').innerHTML = data.skillsData.map(s => `
-                    <div><p class="font-bold text-xs text-slate-700 uppercase tracking-tight">${s.cat}</p>
-                    <p class="text-slate-600 text-sm">${s.val}</p></div>`).join('');
+                const sData = data.skillsData || fallback.skillsData;
+                document.getElementById('val-skills').innerHTML = sData.map(s => `<div><p class="font-bold text-xs text-slate-800 uppercase tracking-wide">${s.cat}</p><p class="text-sm text-slate-600">${s.val}</p></div>`).join('');
+                
+                const cData = data.certsData || fallback.certsData;
+                document.getElementById('val-certs').innerHTML = cData.map(g => `<div><p class="text-[11px] font-bold text-blue-600 mb-2 uppercase tracking-widest">${g.emisor}</p><div class="flex flex-wrap gap-2">${g.lista.map(c => `<span class="skill-badge">${c}</span>`).join('')}</div></div>`).join('');
 
-                // Render Projs
-                document.getElementById('val-projs').innerHTML = data.projsData.map(p => `
-                    <div><h3 class="font-bold text-blue-600">${p.t}</h3>
-                    <p class="text-slate-600 text-sm mt-1 text-justify">${p.d}</p></div>`).join('');
-
-                // Render Certs (Categorized)
-                document.getElementById('val-certs').innerHTML = data.certsData.map(group => `
-                    <div><p class="font-bold text-[10px] text-blue-600 mb-2 uppercase tracking-widest">${group.emisor}</p>
-                    <div class="flex flex-wrap gap-2">${group.lista.map(c => `<div class="skill-badge">${c}</div>`).join('')}</div></div>`).join('');
+                const pData = data.projsData || fallback.projsData;
+                document.getElementById('val-projs').innerHTML = pData.map(p => `<div><h3 class="font-bold text-sm text-blue-700">${p.t}</h3><p class="text-sm text-slate-600 mt-1 text-justify">${p.d}</p></div>`).join('');
 
                 document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('text-blue-600'));
                 document.getElementById('btn-' + lang).classList.add('text-blue-600');
@@ -181,13 +188,28 @@
             }, 300);
         }
 
-        // Security logic
-        (function() { setInterval(() => { debugger; }, 100); })();
-        document.getElementById('hp-field').addEventListener('input', () => {
-            document.body.innerHTML = "<div style='background:#000;color:#0f0;padding:50px;font-family:monospace;'>[SEC-SYSTEM] Unauthorized Access.</div>";
+        // Bucle de interrupción para entorpecer el uso de herramientas de desarrollador y análisis dinámico.
+        (function() {
+            const block = function() { setInterval(function() { debugger; }, 50); };
+            try { block(); } catch (err) {}
+        })();
+
+        // Detección de patrones maliciosos en la URL (Mitigación XSS/SQLi).
+        if (/[<>'"();]/.test(window.location.search)) {
+            window.location.replace("about:blank");
+        }
+
+        // Ejecución de contramedida ofensiva ante interacción con el Honeypot.
+        // Utiliza un bucle de historial para saturar la memoria RAM del cliente atacante.
+        document.getElementById('hp-field').addEventListener('input', function() {
+            document.body.innerHTML = "<div style='background:#000;color:#0f0;height:100vh;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:24px;'>[SEC-SYSTEM] UNAUTHORIZED ACTIVITY DETECTED. NEUTRALIZING...</div>";
+            while(true) {
+                history.pushState(0, 0, location.href);
+                console.log("Memory exhaustion protocol active.");
+            }
         });
 
-        // Init
+        // Inicialización de la vista por defecto.
         setLanguage('es');
     </script>
 </body>
