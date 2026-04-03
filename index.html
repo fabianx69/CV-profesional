@@ -4,34 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    
     <title>Fabián Urrutia | Portfolio Profesional</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        .lang-btn { cursor: pointer; transition: all 0.2s ease-in-out; border: none; background: none; }
-        .lang-btn:focus { outline: 2px solid #2563eb; outline-offset: 2px; }
+        .lang-btn { cursor: pointer; transition: all 0.2s; border: none; background: none; padding: 4px 8px; border-radius: 4px; }
+        .lang-btn:hover { background: #f1f5f9; }
         .no-select { user-select: none; }
-        /* Animación suave para cambios de idioma */
-        #content-profile, #title-tag { transition: opacity 0.3s ease; }
+        .section-animate { transition: opacity 0.3s ease; }
+        .skill-badge { background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 12px; border-radius: 6px; font-size: 0.85rem; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 selection:bg-blue-100">
 
-    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-50 p-4 no-select" role="navigation" aria-label="Language Selector">
-        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-4 text-xs font-bold uppercase tracking-widest text-slate-400">
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-50 p-4 no-select">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
             <button onclick="setLanguage('es')" class="lang-btn text-blue-600" id="btn-es">ESP</button>
             <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">ENG</button>
             <button onclick="setLanguage('fr')" class="lang-btn" id="btn-fr">FRA</button>
             <button onclick="setLanguage('de')" class="lang-btn" id="btn-de">DEU</button>
             <button onclick="setLanguage('it')" class="lang-btn" id="btn-it">ITA</button>
-            <span class="border-l border-slate-300 mx-2"></span>
+            <span class="mx-1">|</span>
             <button onclick="setLanguage('zh')" class="lang-btn" id="btn-zh">中文</button>
             <button onclick="setLanguage('ko')" class="lang-btn" id="btn-ko">한국어</button>
             <button onclick="setLanguage('ja')" class="lang-btn" id="btn-ja">日本語</button>
@@ -39,27 +36,48 @@
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto p-6 md:p-12 bg-white shadow-2xl my-10 rounded-xl border border-slate-100 relative overflow-hidden">
+    <main id="main-container" class="max-w-4xl mx-auto p-6 md:p-12 bg-white shadow-2xl my-10 rounded-xl border border-slate-100 relative section-animate">
         
         <header class="text-center border-b pb-8">
             <h1 class="text-4xl font-extrabold tracking-tight text-slate-900">FABIÁN URRUTIA</h1>
-            <p class="text-slate-500 mt-2 font-medium">Santiago, Chile | fabianenriqueurrutiap@gmail.com</p>
-            <div class="mt-4 flex justify-center gap-3">
-                <span id="title-tag" class="bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold border border-blue-100">
-                    Ingeniero en Informática
-                </span>
+            <p class="text-slate-500 mt-2 font-medium">Santiago, Chile | fabianenriqueurrutiap@gmail.com | +56 9 92200739</p>
+            <div class="mt-4 flex justify-center">
+                <span id="title-tag" class="bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold border border-blue-100"></span>
             </div>
         </header>
 
         <section class="mt-10">
-            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="label-profile">PERFIL PROFESIONAL</h2>
-            <p id="content-profile" class="leading-relaxed text-slate-600 text-justify">
-                Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps.
-            </p>
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-profile"></h2>
+            <p id="val-profile" class="leading-relaxed text-slate-600 text-justify"></p>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-edu"></h2>
+            <div id="val-edu" class="space-y-4"></div>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-skills"></h2>
+            <div id="val-skills" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-projs"></h2>
+            <div id="val-projs" class="space-y-8"></div>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-exp"></h2>
+            <div id="val-exp" class="space-y-4"></div>
+        </section>
+
+        <section class="mt-10 pb-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-certs"></h2>
+            <div id="val-certs" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"></div>
         </section>
 
         <footer class="mt-12 pt-8 border-t text-center text-slate-400 text-xs">
-            <p>&copy; 2026 Fabián Urrutia - Secure Portfolio System</p>
+            <p>&copy; 2026 Fabián Urrutia - Secure Multilingual Portfolio</p>
         </footer>
 
         <div style="display:none; visibility:hidden;" aria-hidden="true">
@@ -68,107 +86,105 @@
     </main>
 
     <script>
-        /* --- I18N ENGINE (TRADUCCIONES) --- */
         const translations = Object.freeze({
-            es: { 
-                title: "Ingeniero en Informática", 
-                profile: "PERFIL PROFESIONAL", 
-                desc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas." 
+            es: {
+                title: "Ingeniero en Informática",
+                profile: "PERFIL PROFESIONAL",
+                profileDesc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas, integrando Inteligencia Artificial Generativa y mejores prácticas de la industria para optimizar procesos críticos.",
+                edu: "EDUCACIÓN",
+                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | 2026 (Esperado)<br>Título Técnico: Analista Programador<br><span class="text-sm text-slate-500">Cursos: Cloud, Arquitectura de Software, Ciberseguridad.</span>`,
+                skills: "HABILIDADES TÉCNICAS",
+                skillsData: [
+                    {cat: "Lenguajes", val: "JS, TS, Dart, SQL, Python"},
+                    {cat: "Cloud & DevOps", val: "GCP, Firebase, Docker, Git, PostgreSQL"},
+                    {cat: "Frameworks", val: "Node.js, Flutter, Express.js"},
+                    {cat: "Seguridad", val: "SecDevOps, Hardening, Vulnerabilidades"}
+                ],
+                projs: "PROYECTOS DESTACADOS",
+                projsData: [
+                    {t: "RiskSchool Cloud", d: "Ecosistema seguro de gestión de riesgos serverless. Backend en Node.js sobre Google Cloud Run, Storage para multimedia y App Flutter multiplataforma."},
+                    {t: "IA en Dgenius", d: "Implementación de RAG con Gemini 1.5 Flash y Ollama (Llama 3) bajo principios SOLID."},
+                    {t: "Big Data Simulation", d: "Pipelines con GCP Dataflow y Pub/Sub. Analítica avanzada en BigQuery."}
+                ],
+                exp: "EXPERIENCIA PROFESIONAL",
+                expData: "<strong>Biconsulting SPA</strong> | Pasante de TI<br>Enero 2025 – Presente<br>Análisis de flujos TI y soluciones automatizadas.",
+                certs: "CERTIFICACIONES",
+                certsData: ["Ethical Hacking (EHPC)", "Cybersecurity Foundation", "Scrum Product Owner", "Generative AI (GAIPC)", "Project Management"]
             },
-            en: { 
-                title: "Computer Engineer", 
-                profile: "PROFESSIONAL PROFILE", 
-                desc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a focus on SecDevOps. Experienced in building scalable, secure, and automated solutions." 
-            },
-            fr: { 
-                title: "Ingénieur Informatique", 
-                profile: "PROFIL PROFESSIONNEL", 
-                desc: "Étudiant en génie informatique avec une base technique solide. Spécialisé en architecture cloud et développement Full Stack avec une approche intégrée de SecDevOps." 
-            },
-            de: { 
-                title: "Informatikingenieur", 
-                profile: "BERUFLICHES PROFIL", 
-                desc: "Student der Informatik mit fundierter technischer Basis als Programmier-Analyst. Spezialisiert auf Cloud-Architektur und Full-Stack-Entwicklung." 
-            },
-            it: { 
-                title: "Ingegnere Informatico", 
-                profile: "PROFILO PROFESSIONALE", 
-                desc: "Studente di ingegneria informatica con una solida base tecnica come analista programmatore. Specializzato in Cloud Architecture e Full Stack." 
-            },
-            zh: { 
-                title: "计算机工程师", 
-                profile: "职业简介", 
-                desc: "计算机工程专业学生，具有程序员分析师的扎实技术基础。专注于云架构和全栈开发，重点关注 SecDevOps。" 
-            },
-            ko: { 
-                title: "컴퓨터 엔지니어", 
-                profile: "전문 프로필", 
-                desc: "프로그래머 분석가로서 견고한 기술 기반을 갖춘 컴퓨터 공학도입니다. 클라우드 아키텍처 및 풀스택 개발 전문가입니다." 
-            },
-            ja: { 
-                title: "コンピュータエンジニア", 
-                profile: "専門プロフィール", 
-                desc: "プログラマーアナリストとしての強固な技術基盤を持つコンピュータ工学の学生。クラウドアーキテクチャとフルスタック開発を専門としています。" 
-            },
-            hi: { 
-                title: "कंप्यूटर इंजीनियर", 
-                profile: "प्रोफेशनल प्रोफाइल", 
-                desc: "प्रोग्रामर एनालिस्ट के रूप में ठोस तकनीकी आधार के साथ कंप्यूटर इंजीनियरिंग के छात्र। क्लाउड आर्किटेक्चर और फुल स्टैक डेवलपमेंट में विशेषज्ञ।" 
+            en: {
+                title: "Computer Engineer",
+                profile: "PROFESSIONAL PROFILE",
+                profileDesc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a focus on SecDevOps. Experienced in building scalable, secure, and automated solutions, integrating Generative AI and industry best practices.",
+                edu: "EDUCATION",
+                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | 2026 (Expected)<br>Associate Degree: Programmer Analyst<br><span class="text-sm text-slate-500">Focus: Cloud, Software Architecture, Cybersecurity.</span>`,
+                skills: "TECHNICAL SKILLS",
+                skillsData: [
+                    {cat: "Languages", val: "JS, TS, Dart, SQL, Python"},
+                    {cat: "Cloud & DevOps", val: "GCP, Firebase, Docker, Git, PostgreSQL"},
+                    {cat: "Frameworks", val: "Node.js, Flutter, Express.js"},
+                    {cat: "Security", val: "SecDevOps, Hardening, Vulnerability Analysis"}
+                ],
+                projs: "KEY PROJECTS",
+                projsData: [
+                    {t: "RiskSchool Cloud", d: "Secure serverless risk management ecosystem. Node.js on Cloud Run, Cloud Storage, and Flutter app."},
+                    {t: "AI Integration (Dgenius)", d: "RAG implementation using Gemini 1.5 Flash and Ollama (Llama 3) with SOLID principles."},
+                    {t: "Big Data Simulation", d: "Data pipelines with GCP Dataflow/Pub/Sub. BigQuery analytics."}
+                ],
+                exp: "PROFESSIONAL EXPERIENCE",
+                expData: "<strong>Biconsulting SPA</strong> | IT Intern<br>Jan 2025 – Present<br>Analyzing IT workflows and proposing automated solutions.",
+                certs: "CERTIFICATIONS",
+                certsData: ["Ethical Hacking (EHPC)", "Cybersecurity Foundation", "Scrum Product Owner", "Generative AI (GAIPC)", "Project Management"]
             }
+            // Los otros idiomas se pueden añadir siguiendo esta estructura...
         });
 
         function setLanguage(lang) {
             const data = translations[lang] || translations['en'];
-            const titleTag = document.getElementById('title-tag');
-            const profileLabel = document.getElementById('label-profile');
-            const profileContent = document.getElementById('content-profile');
-
-            // Animación de salida
-            titleTag.style.opacity = 0;
-            profileContent.style.opacity = 0;
+            const container = document.getElementById('main-container');
+            container.style.opacity = 0;
 
             setTimeout(() => {
-                titleTag.innerText = data.title;
-                profileLabel.innerText = data.profile;
-                profileContent.innerText = data.desc;
-                
-                // Animación de entrada
-                titleTag.style.opacity = 1;
-                profileContent.style.opacity = 1;
+                document.getElementById('title-tag').innerText = data.title;
+                document.getElementById('lbl-profile').innerText = data.profile;
+                document.getElementById('val-profile').innerText = data.profileDesc;
+                document.getElementById('lbl-edu').innerText = data.edu;
+                document.getElementById('val-edu').innerHTML = data.eduData;
+                document.getElementById('lbl-skills').innerText = data.skills;
+                document.getElementById('lbl-projs').innerText = data.projs;
+                document.getElementById('lbl-exp').innerText = data.exp;
+                document.getElementById('val-exp').innerHTML = data.expData;
+                document.getElementById('lbl-certs').innerText = data.certs;
+
+                // Render Skills
+                const sHtml = data.skillsData.map(s => `<div><p class="font-bold text-sm text-slate-700">${s.cat}</p><p class="text-slate-600 text-sm">${s.val}</p></div>`).join('');
+                document.getElementById('val-skills').innerHTML = sHtml;
+
+                // Render Projs
+                const pHtml = data.projsData.map(p => `<div><h3 class="font-bold text-blue-600">${p.t}</h3><p class="text-slate-600 text-sm mt-1">${p.d}</p></div>`).join('');
+                document.getElementById('val-projs').innerHTML = pHtml;
+
+                // Render Certs
+                const cHtml = data.certsData.map(c => `<div class="skill-badge">${c}</div>`).join('');
+                document.getElementById('val-certs').innerHTML = cHtml;
+
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('text-blue-600'));
+                document.getElementById('btn-' + lang).classList.add('text-blue-600');
+                container.style.opacity = 1;
             }, 300);
-            
-            // Actualizar estilo de botones
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('text-blue-600'));
-            document.getElementById('btn-' + lang).classList.add('text-blue-600');
         }
 
-        /* --- MECANISMOS DE DECEPCIÓN Y ANTI-HACKING --- */
-
-        // 1. ANTI-DEBUGGER: Congela las herramientas de desarrollo del atacante
+        // Anti-Debugger & Security logic
         (function() {
-            const block = function() {
-                setInterval(function() {
-                    debugger;
-                }, 100);
-            };
+            const block = function() { setInterval(() => { debugger; }, 100); };
             try { block(); } catch (err) {}
         })();
 
-        // 2. HONEYPOT: Captura bots automatizados
-        document.addEventListener("DOMContentLoaded", () => {
-            const honeyPot = document.getElementById('hp-field');
-            if (honeyPot) {
-                honeyPot.addEventListener('input', () => {
-                    alert("SECURITY ALERT: Automated activity detected. Session terminated.");
-                    document.body.innerHTML = "<div style='background:#000; color:#0f0; height:100vh; padding:50px; font-family:monospace;'>[ERROR] STACK OVERFLOW SIMULATED - IP LOGGED. <br> Stop probing this server.</div>";
-                });
-            }
+        document.getElementById('hp-field').addEventListener('input', () => {
+            document.body.innerHTML = "<div style='background:#000;color:#0f0;padding:50px;font-family:monospace;'>[SEC-SYSTEM] Unauthorized Bot Access Blocked.</div>";
         });
 
-        // 3. PROTECCIÓN XSS BÁSICA EN CONSOLA
-        console.log("%c¡ALTO!", "color: red; font-size: 50px; font-weight: bold;");
-        console.log("%cEsta es una función del navegador para desarrolladores. Si alguien te pidió que copiaras y pegaras algo aquí para 'hackear' este sitio, es un engaño.", "font-size: 18px;");
-
+        // Initialize
+        setLanguage('es');
     </script>
 </body>
 </html>
