@@ -16,7 +16,7 @@
         .lang-btn:hover { background: #f1f5f9; }
         .no-select { user-select: none; }
         .section-animate { transition: opacity 0.3s ease; }
-        .skill-badge { background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 12px; border-radius: 6px; font-size: 0.85rem; }
+        .skill-badge { background: #f8fafc; border: 1px solid #e2e8f0; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 500; color: #475569; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 selection:bg-blue-100">
@@ -73,7 +73,7 @@
 
         <section class="mt-10 pb-10">
             <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-4 mb-4 text-slate-800" id="lbl-certs"></h2>
-            <div id="val-certs" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm"></div>
+            <div id="val-certs" class="space-y-6"></div>
         </section>
 
         <footer class="mt-12 pt-8 border-t text-center text-slate-400 text-xs">
@@ -92,7 +92,7 @@
                 profile: "PERFIL PROFESIONAL",
                 profileDesc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas, integrando Inteligencia Artificial Generativa y mejores prácticas de la industria para optimizar procesos críticos.",
                 edu: "EDUCACIÓN",
-                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | 2026 (Esperado)<br>Título Técnico: Analista Programador<br><span class="text-sm text-slate-500">Cursos: Cloud, Arquitectura de Software, Ciberseguridad.</span>`,
+                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | 2026 (Esperado)<br>Título Técnico: Analista Programador (Completado)`,
                 skills: "HABILIDADES TÉCNICAS",
                 skillsData: [
                     {cat: "Lenguajes", val: "JS, TS, Dart, SQL, Python"},
@@ -102,21 +102,24 @@
                 ],
                 projs: "PROYECTOS DESTACADOS",
                 projsData: [
-                    {t: "RiskSchool Cloud", d: "Ecosistema seguro de gestión de riesgos serverless. Backend en Node.js sobre Google Cloud Run, Storage para multimedia y App Flutter multiplataforma."},
-                    {t: "IA en Dgenius", d: "Implementación de RAG con Gemini 1.5 Flash y Ollama (Llama 3) bajo principios SOLID."},
-                    {t: "Big Data Simulation", d: "Pipelines con GCP Dataflow y Pub/Sub. Analítica avanzada en BigQuery."}
+                    {t: "RiskSchool Cloud", d: "Ecosistema seguro de gestión de riesgos serverless. Backend en Node.js sobre Google Cloud Run y App Flutter multiplataforma."},
+                    {t: "IA en Dgenius", d: "Implementación de RAG con Gemini 1.5 Flash y Ollama bajo principios SOLID."},
+                    {t: "Big Data Simulation", d: "Pipelines con GCP Dataflow y Pub/Sub. Analítica en BigQuery."}
                 ],
                 exp: "EXPERIENCIA PROFESIONAL",
                 expData: "<strong>Biconsulting SPA</strong> | Pasante de TI<br>Enero 2025 – Presente<br>Análisis de flujos TI y soluciones automatizadas.",
-                certs: "CERTIFICACIONES",
-                certsData: ["Ethical Hacking (EHPC)", "Cybersecurity Foundation", "Scrum Product Owner", "Generative AI (GAIPC)", "Project Management"]
+                certs: "CERTIFICACIONES PROFESIONALES",
+                certsData: [
+                    { emisor: "CertiProf (Internacionales)", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
+                    { emisor: "Especialidades Duoc UC", lista: ["Programación de Software", "Arquitectura de Software", "Inteligencia de Negocios", "Gestión de Proyectos TI", "Modelos de Datos", "Calidad de Software", "Análisis de Requerimientos"] }
+                ]
             },
             en: {
                 title: "Computer Engineer",
                 profile: "PROFESSIONAL PROFILE",
                 profileDesc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a focus on SecDevOps. Experienced in building scalable, secure, and automated solutions, integrating Generative AI and industry best practices.",
                 edu: "EDUCATION",
-                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | 2026 (Expected)<br>Associate Degree: Programmer Analyst<br><span class="text-sm text-slate-500">Focus: Cloud, Software Architecture, Cybersecurity.</span>`,
+                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | 2026 (Expected)<br>Associate Degree: Programmer Analyst (Completed)`,
                 skills: "TECHNICAL SKILLS",
                 skillsData: [
                     {cat: "Languages", val: "JS, TS, Dart, SQL, Python"},
@@ -126,16 +129,18 @@
                 ],
                 projs: "KEY PROJECTS",
                 projsData: [
-                    {t: "RiskSchool Cloud", d: "Secure serverless risk management ecosystem. Node.js on Cloud Run, Cloud Storage, and Flutter app."},
-                    {t: "AI Integration (Dgenius)", d: "RAG implementation using Gemini 1.5 Flash and Ollama (Llama 3) with SOLID principles."},
+                    {t: "RiskSchool Cloud", d: "Secure serverless risk management ecosystem. Node.js on Cloud Run and Flutter app."},
+                    {t: "AI Integration (Dgenius)", d: "RAG implementation using Gemini 1.5 Flash and Ollama with SOLID principles."},
                     {t: "Big Data Simulation", d: "Data pipelines with GCP Dataflow/Pub/Sub. BigQuery analytics."}
                 ],
                 exp: "PROFESSIONAL EXPERIENCE",
                 expData: "<strong>Biconsulting SPA</strong> | IT Intern<br>Jan 2025 – Present<br>Analyzing IT workflows and proposing automated solutions.",
-                certs: "CERTIFICATIONS",
-                certsData: ["Ethical Hacking (EHPC)", "Cybersecurity Foundation", "Scrum Product Owner", "Generative AI (GAIPC)", "Project Management"]
+                certs: "PROFESSIONAL CERTIFICATIONS",
+                certsData: [
+                    { emisor: "CertiProf (International)", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
+                    { emisor: "Duoc UC Specialisations", lista: ["Software Programming", "Software Architecture", "Business Intelligence", "IT Project Management", "Data Modeling", "Software Quality (QA)", "Requirements Analysis"] }
+                ]
             }
-            // Los otros idiomas se pueden añadir siguiendo esta estructura...
         });
 
         function setLanguage(lang) {
@@ -156,16 +161,19 @@
                 document.getElementById('lbl-certs').innerText = data.certs;
 
                 // Render Skills
-                const sHtml = data.skillsData.map(s => `<div><p class="font-bold text-sm text-slate-700">${s.cat}</p><p class="text-slate-600 text-sm">${s.val}</p></div>`).join('');
-                document.getElementById('val-skills').innerHTML = sHtml;
+                document.getElementById('val-skills').innerHTML = data.skillsData.map(s => `
+                    <div><p class="font-bold text-xs text-slate-700 uppercase tracking-tight">${s.cat}</p>
+                    <p class="text-slate-600 text-sm">${s.val}</p></div>`).join('');
 
                 // Render Projs
-                const pHtml = data.projsData.map(p => `<div><h3 class="font-bold text-blue-600">${p.t}</h3><p class="text-slate-600 text-sm mt-1">${p.d}</p></div>`).join('');
-                document.getElementById('val-projs').innerHTML = pHtml;
+                document.getElementById('val-projs').innerHTML = data.projsData.map(p => `
+                    <div><h3 class="font-bold text-blue-600">${p.t}</h3>
+                    <p class="text-slate-600 text-sm mt-1 text-justify">${p.d}</p></div>`).join('');
 
-                // Render Certs
-                const cHtml = data.certsData.map(c => `<div class="skill-badge">${c}</div>`).join('');
-                document.getElementById('val-certs').innerHTML = cHtml;
+                // Render Certs (Categorized)
+                document.getElementById('val-certs').innerHTML = data.certsData.map(group => `
+                    <div><p class="font-bold text-[10px] text-blue-600 mb-2 uppercase tracking-widest">${group.emisor}</p>
+                    <div class="flex flex-wrap gap-2">${group.lista.map(c => `<div class="skill-badge">${c}</div>`).join('')}</div></div>`).join('');
 
                 document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('text-blue-600'));
                 document.getElementById('btn-' + lang).classList.add('text-blue-600');
@@ -173,17 +181,13 @@
             }, 300);
         }
 
-        // Anti-Debugger & Security logic
-        (function() {
-            const block = function() { setInterval(() => { debugger; }, 100); };
-            try { block(); } catch (err) {}
-        })();
-
+        // Security logic
+        (function() { setInterval(() => { debugger; }, 100); })();
         document.getElementById('hp-field').addEventListener('input', () => {
-            document.body.innerHTML = "<div style='background:#000;color:#0f0;padding:50px;font-family:monospace;'>[SEC-SYSTEM] Unauthorized Bot Access Blocked.</div>";
+            document.body.innerHTML = "<div style='background:#000;color:#0f0;padding:50px;font-family:monospace;'>[SEC-SYSTEM] Unauthorized Access.</div>";
         });
 
-        // Initialize
+        // Init
         setLanguage('es');
     </script>
 </body>
