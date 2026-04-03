@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabián Urrutia - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .lang-btn { cursor: pointer; transition: all 0.2s; }
+        .lang-btn:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-md shadow-sm z-50 p-4">
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-4 text-xs font-bold uppercase tracking-widest">
+            <span onclick="setLanguage('es')" class="lang-btn text-blue-600">ESP</span>
+            <span onclick="setLanguage('en')" class="lang-btn">ENG</span>
+            <span onclick="setLanguage('fr')" class="lang-btn">FRA</span>
+            <span onclick="setLanguage('de')" class="lang-btn">DEU</span>
+            <span onclick="setLanguage('it')" class="lang-btn">ITA</span>
+            <span class="border-l border-slate-300 mx-2"></span>
+            <span onclick="setLanguage('zh')" class="lang-btn">中文</span>
+            <span onclick="setLanguage('ko')" class="lang-btn">한국어</span>
+            <span onclick="setLanguage('ja')" class="lang-btn">日本語</span>
+            <span onclick="setLanguage('hi')" class="lang-btn">हिन्दी</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6 md:p-12 bg-white shadow-xl my-10 rounded-lg">
+        
+        <header class="text-center border-b pb-8">
+            <h1 class="text-4xl font-bold tracking-tight">FABIÁN URRUTIA</h1>
+            <p class="text-slate-500 mt-2">Santiago, Chile | fabianenriqueurrutiap@gmail.com</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <span class="bg-slate-100 px-3 py-1 rounded-full text-sm font-medium" id="title-tag">Ingeniero en Informática</span>
+            </div>
+        </header>
+
+        <section class="mt-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-3 mb-4" id="label-profile">PERFIL PROFESIONAL</h2>
+            <p id="content-profile" class="leading-relaxed text-slate-700 text-justify">
+                Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps.
+            </p>
+        </section>
+
+        <section class="mt-10">
+            <h2 class="text-xl font-bold border-l-4 border-blue-600 pl-3 mb-4" id="label-skills">HABILIDADES TÉCNICAS</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                <div class="bg-slate-50 p-3 rounded"><strong>Languages:</strong> JS, TS, Dart, SQL, Python</div>
+                <div class="bg-slate-50 p-3 rounded"><strong>Cloud:</strong> GCP, Firebase, Docker</div>
+                <div class="bg-slate-50 p-3 rounded"><strong>Frameworks:</strong> Node.js, Flutter</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const translations = {
+            es: {
+                title: "Ingeniero en Informática",
+                profile: "PERFIL PROFESIONAL",
+                skills: "HABILIDADES TÉCNICAS",
+                desc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas."
+            },
+            en: {
+                title: "Computer Engineer",
+                profile: "PROFESSIONAL PROFILE",
+                skills: "TECHNICAL SKILLS",
+                desc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a comprehensive focus on SecDevOps. Experienced in building scalable, secure, and automated solutions."
+            },
+            fr: {
+                title: "Ingénieur Informatique",
+                profile: "PROFIL PROFESSIONNEL",
+                skills: "COMPÉTENCES TECHNIQUES",
+                desc: "Étudiant en génie informatique avec une base technique solide d'analyste-programmeur. Spécialisé en architecture cloud et développement Full Stack avec une approche intégrée de SecDevOps."
+            },
+            zh: {
+                title: "计算机工程师",
+                profile: "职业简介",
+                skills: "技术技能",
+                desc: "计算机工程专业学生，具有程序员分析师的扎实技术基础。专注于云架构和全栈开发，重点关注 SecDevOps。"
+            }
+            // Puedes agregar de, it, ko, ja, hi siguiendo el mismo patrón
+        };
+
+        function setLanguage(lang) {
+            const data = translations[lang] || translations['en'];
+            document.getElementById('title-tag').innerText = data.title;
+            document.getElementById('label-profile').innerText = data.profile;
+            document.getElementById('label-skills').innerText = data.skills;
+            document.getElementById('content-profile').innerText = data.desc;
+            
+            // Estilo visual del botón activo
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('text-blue-600'));
+            event.target.classList.add('text-blue-600');
+        }
+    </script>
+</body>
+</html>
