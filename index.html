@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    
     <title>Fabián Urrutia | Portfolio Profesional</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
@@ -89,98 +86,229 @@
     </main>
 
     <script>
-        // Estructura de datos para internacionalización.
         const translations = Object.freeze({
             es: {
-                title: "Ingeniero en Informática",
-                profile: "PERFIL PROFESIONAL",
-                profileDesc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas, integrando Inteligencia Artificial Generativa y mejores prácticas de la industria para optimizar procesos críticos.",
-                edu: "EDUCACIÓN",
-                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | Fecha esperada de graduación: 2026<br>Título Técnico: Analista Programador (Completado)`,
+                title: "Ingeniero en Informática", profile: "PERFIL PROFESIONAL",
+                profileDesc: "Estudiante de Ingeniería en Informática con sólida base técnica como Analista Programador. Especializado en Arquitectura Cloud y Desarrollo Full Stack con un enfoque integral en SecDevOps. Experiencia en la creación de soluciones escalables, seguras y automatizadas, integrando Inteligencia Artificial Generativa y mejores prácticas de la industria.",
+                edu: "EDUCACIÓN", eduData: "<strong>Duoc UC | Santiago, Chile</strong><br>Ingeniería en Informática | Esperado: 2026<br>Título Técnico: Analista Programador (Completado)",
                 skills: "HABILIDADES TÉCNICAS",
                 skillsData: [
-                    {cat: "Lenguajes", val: "JavaScript, TypeScript, Dart, SQL, Python."},
-                    {cat: "Frameworks", val: "Node.js, Flutter (Móvil y Web), Express.js."},
-                    {cat: "Cloud & DevOps", val: "Google Cloud Platform (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."},
-                    {cat: "Seguridad", val: "Implementación de metodologías SecDevOps, análisis de vulnerabilidades y hardening."}
+                    {cat: "Lenguajes", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "Frameworks", val: "Node.js, Flutter (Móvil y Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."}, {cat: "Seguridad", val: "Metodologías SecDevOps, análisis de vulnerabilidades y hardening."}
                 ],
                 projs: "PROYECTOS DESTACADOS",
                 projsData: [
-                    {t: "RiskSchool Cloud | Ingeniero Full Stack & Cloud", d: "Arquitectura y despliegue de un ecosistema seguro de gestión de riesgos. Desarrollo de API REST de alto rendimiento con Node.js, contenedores y despliegue en Google Cloud Run. Gestión de instancia Cloud de PostgreSQL 17. Aplicación unificada en Flutter."},
-                    {t: "Integración de IA en Dgenius | Ingeniero Full Stack", d: "Implementación de IA Generativa aplicando técnicas de RAG y principios SOLID. Motores: Gemini 1.5 Flash como motor principal y Ollama (Llama 3) para shadow learning."},
-                    {t: "Simulación de Big Data | Ingeniero de Datos", d: "Implementación de pipelines con GCP Dataflow y Pub/Sub para flujos de datos en tiempo real. Uso de BigQuery para analítica avanzada."}
+                    {t: "RiskSchool Cloud | Full Stack & Cloud", d: "Arquitectura y despliegue de ecosistema de gestión de riesgos. API REST con Node.js en Cloud Run. Gestión PostgreSQL 17 y App Flutter unificada."},
+                    {t: "IA en Dgenius | Full Stack", d: "IA Generativa aplicando RAG y principios SOLID. Motores: Gemini 1.5 Flash y Ollama (Llama 3)."},
+                    {t: "Simulación Big Data | Data Engineer", d: "Pipelines con GCP Dataflow y Pub/Sub. Analítica en BigQuery."}
                 ],
-                exp: "EXPERIENCIA PROFESIONAL",
-                expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>Pasante de TI | Enero 2025 – Presente<br>Análisis y documentación de flujos de trabajo de TI para la estrategia de digitalización. Colaboración para identificar cuellos de botella y proponer soluciones automatizadas.",
+                exp: "EXPERIENCIA PROFESIONAL", expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>Pasante de TI | Enero 2025 – Presente<br>Análisis de flujos de trabajo de TI para digitalización. Soluciones automatizadas.",
                 certs: "CERTIFICACIONES PROFESIONALES",
                 certsData: [
-                    { emisor: "CertiProf", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
-                    { emisor: "Especialidades Duoc UC", lista: ["Programación de Software", "Arquitectura de Software", "Inteligencia de Negocios", "Gestión de Proyectos Informáticos", "Análisis y Desarrollo de Modelos de Datos", "Calidad de Software", "Análisis y Planificación de Requerimientos"] }
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner", "Ethical Hacking", "Cybersecurity Awareness", "Cybersecurity Foundation", "Software Project Leader", "Generative AI"] },
+                    { emisor: "Especialidades Duoc UC", lista: ["Programación de Software", "Arquitectura de Software", "Inteligencia de Negocios", "Gestión de Proyectos", "Modelos de Datos", "Calidad de Software", "Análisis de Requerimientos"] }
                 ]
             },
             en: {
-                title: "Computer Engineer",
-                profile: "PROFESSIONAL PROFILE",
-                profileDesc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a comprehensive focus on SecDevOps. Experienced in building scalable, secure, and automated solutions, integrating Generative AI.",
-                edu: "EDUCATION",
-                eduData: `<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | Expected Graduation: 2026<br>Associate Degree: Programmer Analyst (Completed)`,
+                title: "Computer Engineer", profile: "PROFESSIONAL PROFILE",
+                profileDesc: "Computer Engineering student with a solid technical foundation as a Programmer Analyst. Specialized in Cloud Architecture and Full Stack Development with a focus on SecDevOps. Experienced in building scalable, secure, and automated solutions, integrating Generative AI.",
+                edu: "EDUCATION", eduData: "<strong>Duoc UC | Santiago, Chile</strong><br>BSc Computer Engineering | Expected: 2026<br>Associate Degree: Programmer Analyst (Completed)",
                 skills: "TECHNICAL SKILLS",
                 skillsData: [
-                    {cat: "Languages", val: "JavaScript, TypeScript, Dart, SQL, Python."},
-                    {cat: "Frameworks", val: "Node.js, Flutter (Mobile & Web), Express.js."},
-                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."},
-                    {cat: "Security", val: "SecDevOps methodologies, vulnerability analysis, cloud hardening."}
+                    {cat: "Languages", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "Frameworks", val: "Node.js, Flutter (Mobile & Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."}, {cat: "Security", val: "SecDevOps methodologies, vulnerability analysis, cloud hardening."}
                 ],
                 projs: "KEY PROJECTS",
                 projsData: [
-                    {t: "RiskSchool Cloud | Full Stack & Cloud Engineer", d: "Architecture and deployment of a secure risk management ecosystem. High-performance REST API with Node.js on Google Cloud Run. Managed PostgreSQL 17. Unified Flutter application."},
+                    {t: "RiskSchool Cloud | Full Stack & Cloud Engineer", d: "Architecture and deployment of a secure risk management ecosystem. High-performance REST API with Node.js on Cloud Run. Managed PostgreSQL 17. Unified Flutter application."},
                     {t: "AI Integration at Dgenius | Full Stack Engineer", d: "Generative AI implementation using RAG techniques and SOLID principles. Engines: Gemini 1.5 Flash and Ollama (Llama 3)."},
-                    {t: "Big Data Simulation | Data Engineer", d: "Pipelines with GCP Dataflow and Pub/Sub. BigQuery for advanced analytics."}
+                    {t: "Big Data Simulation | Data Engineer", d: "Data pipelines with GCP Dataflow and Pub/Sub. BigQuery for advanced analytics."}
                 ],
-                exp: "PROFESSIONAL EXPERIENCE",
-                expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>IT Intern | Jan 2025 – Present<br>Analyzing IT workflows for digitalization strategy. Proposing automated solutions.",
-                certs: "PROFESSIONAL CERTIFICATIONS",
+                exp: "PROFESSIONAL EXPERIENCE", expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>IT Intern | Jan 2025 – Present<br>Analyzing IT workflows for digitalization strategy. Proposing automated solutions.",
+                certs: "CERTIFICATIONS",
                 certsData: [
-                    { emisor: "CertiProf", lista: ["Scrum Product Owner (SPOPC)", "Ethical Hacking (EHPC)", "Cybersecurity Awareness (CAPC)", "Cybersecurity Foundation (CFPC)", "Software Project Leader (SPLPC)", "Generative AI (GAIPC)"] },
-                    { emisor: "Duoc UC Specialisations", lista: ["Software Programming", "Software Architecture", "Business Intelligence", "IT Project Management", "Data Model Development", "Software Quality", "Requirements Analysis"] }
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner", "Ethical Hacking", "Cybersecurity Awareness", "Cybersecurity Foundation", "Software Project Leader", "Generative AI"] },
+                    { emisor: "Duoc UC Specialisations", lista: ["Software Programming", "Software Architecture", "Business Intelligence", "IT Project Management", "Data Modeling", "Software Quality", "Requirements Analysis"] }
                 ]
             },
-            zh: { title: "计算机工程师", profile: "职业简介", edu: "教育背景", skills: "技术技能", projs: "精选项目", exp: "工作经验", certs: "专业认证" },
-            ja: { title: "コンピュータエンジニア", profile: "専門プロフィール", edu: "学歴", skills: "技術スキル", projs: "主要プロジェクト", exp: "職歴", certs: "認定資格" },
-            ko: { title: "컴퓨터 엔지니어", profile: "프로필", edu: "학력", skills: "기술 스택", projs: "주요 프로젝트", exp: "경력", certs: "자격증" },
-            hi: { title: "कंप्यूटर इंजीनियर", profile: "प्रोफाइल", edu: "शिक्षा", skills: "कौशल", projs: "परियोजनाएं", exp: "अनुभव", certs: "प्रमाणन" },
-            de: { title: "Informatikingenieur", profile: "BERUFLICHES PROFIL", edu: "AUSBILDUNG", skills: "TECHNISCHE FÄHIGKEITEN", projs: "PROJEKTE", exp: "BERUFSERFAHRUNG", certs: "ZERTIFIZIERUNGEN" },
-            fr: { title: "Ingénieur Informatique", profile: "PROFIL PROFESSIONNEL", edu: "ÉDUCATION", skills: "COMPÉTENCES TECHNIQUES", projs: "PROJETS CLÉS", exp: "EXPÉRIENCE", certs: "CERTIFICATIONS" },
-            it: { title: "Ingegnere Informatico", profile: "PROFILO PROFESSIONALE", edu: "FORMAZIONE", skills: "COMPETENZE TECNICHE", projs: "PROGETTI", exp: "ESPERIENZA", certs: "CERTIFICAZIONI" }
+            fr: {
+                title: "Ingénieur Informatique", profile: "PROFIL PROFESSIONNEL",
+                profileDesc: "Étudiant en ingénierie informatique avec une solide base technique en tant qu'analyste-programmeur. Spécialisé en architecture Cloud et développement Full Stack avec une approche intégrée SecDevOps. Expérience dans la création de solutions évolutives et sécurisées, intégrant l'IA générative.",
+                edu: "ÉDUCATION", eduData: "<strong>Duoc UC | Santiago, Chili</strong><br>Ingénierie Informatique | Prévu : 2026<br>Diplôme d'Associé : Analyste-Programmeur (Terminé)",
+                skills: "COMPÉTENCES TECHNIQUES",
+                skillsData: [
+                    {cat: "Langages", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "Frameworks", val: "Node.js, Flutter (Mobile & Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."}, {cat: "Sécurité", val: "Méthodologies SecDevOps, analyse des vulnérabilités, hardening."}
+                ],
+                projs: "PROJETS CLÉS",
+                projsData: [
+                    {t: "RiskSchool Cloud | Ingénieur Full Stack & Cloud", d: "Architecture d'un écosystème de gestion des risques. API REST avec Node.js sur Cloud Run. PostgreSQL 17 et application Flutter."},
+                    {t: "Intégration IA chez Dgenius | Ingénieur Full Stack", d: "Implémentation d'IA Générative avec RAG et principes SOLID. Moteurs : Gemini 1.5 Flash et Ollama."},
+                    {t: "Simulation Big Data | Ingénieur Data", d: "Pipelines de données avec GCP Dataflow et Pub/Sub. Analytique sur BigQuery."}
+                ],
+                exp: "EXPÉRIENCE PROFESSIONNELLE", expData: "<strong>Biconsulting SPA | Santiago, Chili</strong><br>Stagiaire IT | Janv 2025 – Présent<br>Analyse des flux de travail IT pour la numérisation. Solutions automatisées.",
+                certs: "CERTIFICATIONS",
+                certsData: [
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner", "Ethical Hacking", "Cybersecurity Awareness", "Cybersecurity Foundation", "Software Project Leader", "Generative AI"] },
+                    { emisor: "Spécialités Duoc UC", lista: ["Programmation Logicielle", "Architecture Logicielle", "Business Intelligence", "Gestion de Projets", "Modélisation de Données", "Qualité Logicielle", "Analyse des Besoins"] }
+                ]
+            },
+            de: {
+                title: "Informatikingenieur", profile: "BERUFLICHES PROFIL",
+                profileDesc: "Informatikstudent mit fundierter technischer Basis als Programmier-Analyst. Spezialisiert auf Cloud-Architektur und Full-Stack-Entwicklung mit SecDevOps-Fokus. Erfahren in der Erstellung skalierbarer, sicherer Lösungen und der Integration von generativer KI.",
+                edu: "AUSBILDUNG", eduData: "<strong>Duoc UC | Santiago, Chile</strong><br>BSc Informatikingenieurwesen | Voraussichtlich: 2026<br>Associate Degree: Programmier-Analyst (Abgeschlossen)",
+                skills: "TECHNISCHE FÄHIGKEITEN",
+                skillsData: [
+                    {cat: "Sprachen", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "Frameworks", val: "Node.js, Flutter (Mobile & Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."}, {cat: "Sicherheit", val: "SecDevOps, Schwachstellenanalyse, Cloud-Hardening."}
+                ],
+                projs: "PROJEKTE",
+                projsData: [
+                    {t: "RiskSchool Cloud | Full Stack & Cloud Engineer", d: "Architektur eines sicheren Risikomanagement-Ökosystems. REST API mit Node.js auf Cloud Run. Flutter-Anwendung."},
+                    {t: "KI-Integration bei Dgenius | Full Stack Engineer", d: "Implementierung von generativer KI mit RAG und SOLID-Prinzipien. Engines: Gemini 1.5 Flash und Ollama."},
+                    {t: "Big Data Simulation | Data Engineer", d: "Daten-Pipelines mit GCP Dataflow und Pub/Sub. BigQuery-Analysen."}
+                ],
+                exp: "BERUFSERFAHRUNG", expData: "<strong>Biconsulting SPA | Santiago, Chile</strong><br>IT-Praktikant | Jan 2025 – Heute<br>Analyse von IT-Workflows zur Digitalisierung. Automatisierungslösungen.",
+                certs: "ZERTIFIZIERUNGEN",
+                certsData: [
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner", "Ethical Hacking", "Cybersecurity Awareness", "Cybersecurity Foundation", "Software Project Leader", "Generative AI"] },
+                    { emisor: "Duoc UC Spezialisierungen", lista: ["Softwareprogrammierung", "Softwarearchitektur", "Business Intelligence", "IT-Projektmanagement", "Datenmodellierung", "Softwarequalität", "Anforderungsanalyse"] }
+                ]
+            },
+            it: {
+                title: "Ingegnere Informatico", profile: "PROFILO PROFESSIONALE",
+                profileDesc: "Studente di Ingegneria Informatica con una solida base tecnica come Analista Programmatore. Specializzato in Cloud Architecture e Full Stack Development con focus su SecDevOps. Esperto nella creazione di soluzioni scalabili e sicure, integrando l'IA Generativa.",
+                edu: "FORMAZIONE", eduData: "<strong>Duoc UC | Santiago, Cile</strong><br>Ingegneria Informatica | Previsto: 2026<br>Diploma di Analista Programmatore (Completato)",
+                skills: "COMPETENZE TECNICHE",
+                skillsData: [
+                    {cat: "Linguaggi", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "Framework", val: "Node.js, Flutter (Mobile & Web), Express.js."},
+                    {cat: "Cloud & DevOps", val: "GCP (Cloud Run, Cloud Storage), Firebase, PostgreSQL 17, Docker, Git."}, {cat: "Sicurezza", val: "Metodologie SecDevOps, analisi delle vulnerabilità, hardening."}
+                ],
+                projs: "PROGETTI CHIAVE",
+                projsData: [
+                    {t: "RiskSchool Cloud | Full Stack & Cloud Engineer", d: "Ecosistema di gestione dei rischi sicuro. API REST con Node.js su Cloud Run. PostgreSQL 17 e app Flutter."},
+                    {t: "Integrazione IA in Dgenius | Full Stack Engineer", d: "Implementazione IA Generativa con RAG e principi SOLID. Motori: Gemini 1.5 Flash e Ollama."},
+                    {t: "Simulazione Big Data | Data Engineer", d: "Pipeline di dati con GCP Dataflow e Pub/Sub. Analisi BigQuery."}
+                ],
+                exp: "ESPERIENZA PROFESSIONALE", expData: "<strong>Biconsulting SPA | Santiago, Cile</strong><br>Stagista IT | Gen 2025 – Presente<br>Analisi dei flussi di lavoro IT per la digitalizzazione. Soluzioni automatizzate.",
+                certs: "CERTIFICAZIONI",
+                certsData: [
+                    { emisor: "CertiProf", lista: ["Scrum Product Owner", "Ethical Hacking", "Cybersecurity Awareness", "Cybersecurity Foundation", "Software Project Leader", "Generative AI"] },
+                    { emisor: "Specializzazioni Duoc UC", lista: ["Programmazione Software", "Architettura Software", "Business Intelligence", "Project Management", "Modellazione Dati", "Qualità Software", "Analisi dei Requisiti"] }
+                ]
+            },
+            zh: {
+                title: "计算机工程师", profile: "职业简介",
+                profileDesc: "计算机工程专业的学生，具有程序员分析师的扎实技术基础。专注于云架构和全栈开发，重点关注 SecDevOps。在构建可扩展、安全的自动化解决方案以及集成生成式 AI 方面经验丰富。",
+                edu: "教育背景", eduData: "<strong>Duoc UC | 智利 圣地亚哥</strong><br>计算机工程理学士 | 预计毕业：2026<br>副学士学位：程序员分析师（已完成）",
+                skills: "技术技能",
+                skillsData: [
+                    {cat: "编程语言", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "框架", val: "Node.js, Flutter, Express.js."},
+                    {cat: "云和 DevOps", val: "GCP, Firebase, PostgreSQL 17, Docker, Git."}, {cat: "安全", val: "SecDevOps 方法、漏洞分析、云加固。"}
+                ],
+                projs: "精选项目",
+                projsData: [
+                    {t: "RiskSchool Cloud | 全栈与云工程师", d: "安全风险管理生态系统的架构与部署。在 Cloud Run 上使用 Node.js 构建 API。统一的 Flutter 应用。"},
+                    {t: "Dgenius AI 集成 | 全栈工程师", d: "使用 RAG 技术和 SOLID 原则实施生成式 AI。引擎：Gemini 1.5 Flash 和 Ollama。"},
+                    {t: "大数据模拟 | 数据工程师", d: "使用 GCP Dataflow 和 Pub/Sub 构建数据管道。BigQuery 分析。"}
+                ],
+                exp: "工作经验", expData: "<strong>Biconsulting SPA | 智利 圣地亚哥</strong><br>IT 实习生 | 2025 年 1 月 – 至今<br>分析 IT 工作流以实施数字化战略。提出自动化解决方案。",
+                certs: "专业认证",
+                certsData: [
+                    { emisor: "CertiProf 认证", lista: ["Scrum 产品负责人", "道德黑客", "网络安全意识", "网络安全基础", "软件项目主管", "生成式 AI"] },
+                    { emisor: "Duoc UC 专业", lista: ["软件编程", "软件架构", "商业智能", "IT 项目管理", "数据建模", "软件质量", "需求分析"] }
+                ]
+            },
+            ja: {
+                title: "コンピュータエンジニア", profile: "専門プロフィール",
+                profileDesc: "プログラマーアナリストとしての確固たる技術基盤を持つコンピュータ工学の学生。SecDevOpsに焦点を当てたクラウドアーキテクチャとフルスタック開発を専門としています。生成AIを統合した安全でスケーラブルなソリューションの構築経験があります。",
+                edu: "学歴", eduData: "<strong>Duoc UC | チリ、サンティアゴ</strong><br>コンピュータ工学士 | 卒業予定: 2026年<br>準学士号: プログラマーアナリスト（修了）",
+                skills: "技術スキル",
+                skillsData: [
+                    {cat: "言語", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "フレームワーク", val: "Node.js, Flutter, Express.js."},
+                    {cat: "クラウド & DevOps", val: "GCP, Firebase, PostgreSQL 17, Docker, Git."}, {cat: "セキュリティ", val: "SecDevOps手法、脆弱性分析、クラウドの堅牢化。"}
+                ],
+                projs: "主要プロジェクト",
+                projsData: [
+                    {t: "RiskSchool Cloud | フルスタック＆クラウドエンジニア", d: "安全なリスク管理エコシステムの構築。Cloud Run上のNode.js API。統合Flutterアプリ。"},
+                    {t: "DgeniusのAI統合 | フルスタックエンジニア", d: "RAGとSOLID原則を用いた生成AIの実装。Gemini 1.5 FlashとOllamaを使用。"},
+                    {t: "ビッグデータシミュレーション | データエンジニア", d: "GCP DataflowとPub/Subによるデータパイプライン。BigQuery分析。"}
+                ],
+                exp: "職歴", expData: "<strong>Biconsulting SPA | チリ、サンティアゴ</strong><br>ITインターン | 2025年1月 – 現在<br>デジタル化戦略のためのITワークフローの分析。自動化ソリューションの提案。",
+                certs: "認定資格",
+                certsData: [
+                    { emisor: "CertiProf 資格", lista: ["Scrumプロダクトオーナー", "エシカルハッキング", "サイバーセキュリティ意識", "サイバーセキュリティ基礎", "ソフトウェアプロジェクトリーダー", "生成AI"] },
+                    { emisor: "Duoc UC 専門", lista: ["ソフトウェアプログラミング", "ソフトウェアアーキテクチャ", "ビジネスインテリジェンス", "ITプロジェクト管理", "データモデリング", "ソフトウェア品質", "要件分析"] }
+                ]
+            },
+            ko: {
+                title: "컴퓨터 엔지니어", profile: "프로필",
+                profileDesc: "프로그래머 분석가로서 탄탄한 기술적 기반을 갖춘 컴퓨터 공학도. SecDevOps에 중점을 둔 클라우드 아키텍처 및 풀스택 개발 전문가. 생성형 AI를 통합하여 안전하고 확장 가능한 솔루션 구축 경험 보유.",
+                edu: "학력", eduData: "<strong>Duoc UC | 칠레 산티아고</strong><br>컴퓨터 공학 학사 | 졸업 예정: 2026<br>전문 학사: 프로그래머 분석가 (완료)",
+                skills: "기술 스택",
+                skillsData: [
+                    {cat: "언어", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "프레임워크", val: "Node.js, Flutter, Express.js."},
+                    {cat: "클라우드 및 DevOps", val: "GCP, Firebase, PostgreSQL 17, Docker, Git."}, {cat: "보안", val: "SecDevOps 방법론, 취약점 분석, 클라우드 강화."}
+                ],
+                projs: "주요 프로젝트",
+                projsData: [
+                    {t: "RiskSchool Cloud | 풀스택 및 클라우드 엔지니어", d: "안전한 위험 관리 생태계 구축. Cloud Run의 Node.js API. 통합 Flutter 앱."},
+                    {t: "Dgenius AI 통합 | 풀스택 엔지니어", d: "RAG 기술 및 SOLID 원칙을 적용한 생성형 AI 구현. 엔진: Gemini 1.5 Flash 및 Ollama."},
+                    {t: "빅데이터 시뮬레이션 | 데이터 엔지니어", d: "GCP Dataflow 및 Pub/Sub 데이터 파이프라인. BigQuery 분석."}
+                ],
+                exp: "경력", expData: "<strong>Biconsulting SPA | 칠레 산티아고</strong><br>IT 인턴 | 2025년 1월 – 현재<br>디지털화 전략을 위한 IT 워크플로 분석 및 자동화 솔루션 제안.",
+                certs: "자격증",
+                certsData: [
+                    { emisor: "CertiProf 인증", lista: ["스크럼 제품 책임자", "윤리적 해킹", "사이버 보안 인식", "사이버 보안 기초", "소프트웨어 프로젝트 리더", "생성형 AI"] },
+                    { emisor: "Duoc UC 전공", lista: ["소프트웨어 프로그래밍", "소프트웨어 아키텍처", "비즈니스 인텔리전스", "IT 프로젝트 관리", "데이터 모델링", "소프트웨어 품질", "요구 사항 분석"] }
+                ]
+            },
+            hi: {
+                title: "कंप्यूटर इंजीनियर", profile: "प्रोफाइल",
+                profileDesc: "प्रोग्रामर एनालिस्ट के रूप में ठोस तकनीकी आधार के साथ कंप्यूटर इंजीनियरिंग के छात्र। SecDevOps पर ध्यान देने के साथ क्लाउड आर्किटेक्चर और फुल स्टैक डेवलपमेंट में विशेषज्ञ। जनरेटिव एआई को एकीकृत करते हुए सुरक्षित और स्केलेबल समाधान बनाने का अनुभव।",
+                edu: "शिक्षा", eduData: "<strong>Duoc UC | सैंटियागो, चिली</strong><br>बीएससी कंप्यूटर इंजीनियरिंग | अपेक्षित स्नातक: 2026<br>एसोसिएट डिग्री: प्रोग्रामर एनालिस्ट (पूर्ण)",
+                skills: "तकनीकी कौशल",
+                skillsData: [
+                    {cat: "भाषाएं", val: "JavaScript, TypeScript, Dart, SQL, Python."}, {cat: "फ्रेमवर्क", val: "Node.js, Flutter, Express.js."},
+                    {cat: "क्लाउड और DevOps", val: "GCP, Firebase, PostgreSQL 17, Docker, Git."}, {cat: "सुरक्षा", val: "SecDevOps कार्यप्रणाली, भेद्यता विश्लेषण।"}
+                ],
+                projs: "प्रमुख परियोजनाएं",
+                projsData: [
+                    {t: "RiskSchool Cloud | फुल स्टैक और क्लाउड इंजीनियर", d: "सुरक्षित जोखिम प्रबंधन पारिस्थितिकी तंत्र। Cloud Run पर Node.js API। एकीकृत Flutter ऐप।"},
+                    {t: "Dgenius AI एकीकरण | फुल स्टैक इंजीनियर", d: "RAG तकनीकों और SOLID सिद्धांतों का उपयोग करके जनरेटिव AI कार्यान्वयन।"},
+                    {t: "बिग डेटा सिमुलेशन | डेटा इंजीनियर", d: "GCP Dataflow और Pub/Sub के साथ डेटा पाइपलाइन। BigQuery विश्लेषण।"}
+                ],
+                exp: "व्यावसायिक अनुभव", expData: "<strong>Biconsulting SPA | सैंटियागो, चिली</strong><br>IT इंटर्न | जनवरी 2025 - वर्तमान<br>डिजिटलीकरण रणनीति के लिए IT वर्कफ़्लो का विश्लेषण।",
+                certs: "प्रमाणन",
+                certsData: [
+                    { emisor: "CertiProf प्रमाणन", lista: ["Scrum प्रोडक्ट ओनर", "एथिकल हैकिंग", "साइबर सुरक्षा जागरूकता", "सॉफ्टवेयर प्रोजेक्ट लीडर", "जनरेटिव एआई"] },
+                    { emisor: "Duoc UC विशेषज्ञता", lista: ["सॉफ्टवेयर प्रोग्रामिंग", "सॉफ्टवेयर आर्किटेक्चर", "बिजनेस इंटेलिजेंस", "IT प्रोजेक्ट मैनेजमेंट", "सॉफ्टवेयर क्वालिटी"] }
+                ]
+            }
         });
 
-        // Motor de renderizado para actualización de datos en el DOM.
         function setLanguage(lang) {
             const data = translations[lang] || translations['en'];
-            const fallback = translations['en'];
             const container = document.getElementById('main-container');
             container.style.opacity = 0;
 
             setTimeout(() => {
                 document.getElementById('title-tag').innerText = data.title;
                 document.getElementById('lbl-profile').innerText = data.profile;
-                document.getElementById('val-profile').innerText = data.profileDesc || fallback.profileDesc;
+                document.getElementById('val-profile').innerText = data.profileDesc;
                 document.getElementById('lbl-edu').innerText = data.edu;
-                document.getElementById('val-edu').innerHTML = data.eduData || fallback.eduData;
+                document.getElementById('val-edu').innerHTML = data.eduData;
                 document.getElementById('lbl-skills').innerText = data.skills;
                 document.getElementById('lbl-projs').innerText = data.projs;
                 document.getElementById('lbl-exp').innerText = data.exp;
-                document.getElementById('val-exp').innerHTML = data.expData || fallback.expData;
+                document.getElementById('val-exp').innerHTML = data.expData;
                 document.getElementById('lbl-certs').innerText = data.certs;
 
-                const sData = data.skillsData || fallback.skillsData;
-                document.getElementById('val-skills').innerHTML = sData.map(s => `<div><p class="font-bold text-xs text-slate-800 uppercase tracking-wide">${s.cat}</p><p class="text-sm text-slate-600">${s.val}</p></div>`).join('');
+                document.getElementById('val-skills').innerHTML = data.skillsData.map(s => `<div><p class="font-bold text-xs text-slate-800 uppercase tracking-wide">${s.cat}</p><p class="text-sm text-slate-600">${s.val}</p></div>`).join('');
                 
-                const cData = data.certsData || fallback.certsData;
-                document.getElementById('val-certs').innerHTML = cData.map(g => `<div><p class="text-[11px] font-bold text-blue-600 mb-2 uppercase tracking-widest">${g.emisor}</p><div class="flex flex-wrap gap-2">${g.lista.map(c => `<span class="skill-badge">${c}</span>`).join('')}</div></div>`).join('');
+                document.getElementById('val-certs').innerHTML = data.certsData.map(g => `<div><p class="text-[11px] font-bold text-blue-600 mb-2 uppercase tracking-widest">${g.emisor}</p><div class="flex flex-wrap gap-2">${g.lista.map(c => `<span class="skill-badge">${c}</span>`).join('')}</div></div>`).join('');
 
-                const pData = data.projsData || fallback.projsData;
-                document.getElementById('val-projs').innerHTML = pData.map(p => `<div><h3 class="font-bold text-sm text-blue-700">${p.t}</h3><p class="text-sm text-slate-600 mt-1 text-justify">${p.d}</p></div>`).join('');
+                document.getElementById('val-projs').innerHTML = data.projsData.map(p => `<div><h3 class="font-bold text-sm text-blue-700">${p.t}</h3><p class="text-sm text-slate-600 mt-1 text-justify">${p.d}</p></div>`).join('');
 
                 document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('text-blue-600'));
                 document.getElementById('btn-' + lang).classList.add('text-blue-600');
@@ -188,19 +316,15 @@
             }, 300);
         }
 
-        // Bucle de interrupción para entorpecer el uso de herramientas de desarrollador y análisis dinámico.
         (function() {
             const block = function() { setInterval(function() { debugger; }, 50); };
             try { block(); } catch (err) {}
         })();
 
-        // Detección de patrones maliciosos en la URL (Mitigación XSS/SQLi).
         if (/[<>'"();]/.test(window.location.search)) {
             window.location.replace("about:blank");
         }
 
-        // Ejecución de contramedida ofensiva ante interacción con el Honeypot.
-        // Utiliza un bucle de historial para saturar la memoria RAM del cliente atacante.
         document.getElementById('hp-field').addEventListener('input', function() {
             document.body.innerHTML = "<div style='background:#000;color:#0f0;height:100vh;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:24px;'>[SEC-SYSTEM] UNAUTHORIZED ACTIVITY DETECTED. NEUTRALIZING...</div>";
             while(true) {
@@ -209,7 +333,6 @@
             }
         });
 
-        // Inicialización de la vista por defecto.
         setLanguage('es');
     </script>
 </body>
