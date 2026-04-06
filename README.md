@@ -1,6 +1,6 @@
 # CV-profesional
 cv 2026 profesional multilenguaje
-
+https://fabianx69.github.io/CV-profesional/
 # Multilingual Professional Portfolio 🌍
 
 Este es el repositorio de mi currículum profesional web, diseñado con un enfoque minimalista y optimizado para ser consultado en múltiples idiomas, inspirado en el formato clásico **EUR** de las consolas portátiles y expandido para el mercado global.
